@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Home</title>
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" href="images/tittle_logo.png" type="image/x-icon">
+	<!--web-fonts-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta charset="UTF-8">
+	<!-- style -->
+	<style>
+		/*留言板 文本框样式*/
+input[type="text"],
+textarea,
+textarea.form-control {
+
+    margin: 0;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: #f8f8f8;
+    border: 3px solid #ddd;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #888; border-radius: 4px; -webkit-box-shadow: none; box-shadow: none; -webkit-transition: all .3s; transition: all .3s;
+}
+
+textarea,
+textarea.form-control {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 30px;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+textarea.form-control:focus {
+    outline: 0;
+    background: #fff;
+    border: 3px solid #ccc; -webkit-box-shadow: none; box-shadow: none;
+}
+
+input[type="text"]:-moz-placeholder, textarea:-moz-placeholder, textarea.form-control:-moz-placeholder { color: #888; }
+input[type="text"]:-ms-input-placeholder, textarea:-ms-input-placeholder, textarea.form-control:-ms-input-placeholder { color: #888; }
+input[type="text"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder, textarea.form-control::-webkit-input-placeholder { color: #888; }
+	</style>
+	<style>
+		dt,
+		dd {
+			padding: 3%;
+		}
+		
+		dd {
+			text-indent: 1em;
+		}
+		
+		@media screen and(max-width: 600px) {
+			.liuyanban-first div:nth-child(1),
+			.liuyanban-second div:nth-child(1),
+			.liuyanban-youxiang div:nth-child(1) {
+				width: 15%;
+			}
+			.liuyanban-first div:nth-child(2),
+			.liuyanban-second div:nth-child(2),
+			.liuyanban-youxiang div:nth-child(2) {
+				width: 85%;
+			}
+			.liuyanban-third input {
+				margin-left: 15%;
+			}
+		}
+	</style>
+	<!-- js -->
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript" src="js/js_l.js"></script>
+</head>
+
+<body>
+<!--header start here-->
+<nav class="navbar navbar-fixed-top top-nav my-navbar" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+				<span class="sr-only">pid</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+				<div class="header-left">
+					<a href="home.html"><img class="menu" src="images/pid-s.png"></a>
+				</div>
+		</div>
+		<div class="collapse navbar-collapse" id="example-navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="active">
+					<a href="home.html">首页</a>
+				</li>
+				<li>
+					<a href="discover_PID.html">发现PID</a>
+				</li>
+				<li>
+					<a href="policy_guide.html">政策向导</a>
+				</li>
+				<li>
+					<a href="about_us.html">关于我们</a>
+				</li>
+				<li id="nav1">
+					<a href="drug_research.html">药物研究</a>
+				</li>
+				<li id="nav2">
+					<a href="PID_library.html">PID图书馆</a>
+				</li>
+				<li id="nav3">
+					<a href="support_us.html">支持我们</a>
+				</li>
+				<li id="nav4">
+					<a href="friend_s_story.html">病友故事会</a>
+				</li>
+				<li id="nav5">
+					<a href="news.html">最新动态</a>
+				</li>
+				<li class="dropdown" style="display: none" id="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						更多
+						<b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="drug_research.html">药物研究</a>
+						</li>
+						<li>
+							<a href="PID_library.html">PID图书馆</a>
+						</li>
+						<li>
+							<a href="support_us.html">支持我们</a>
+						</li>
+						<li>
+							<a href="friend_s_story.html">病友故事会</a>
+						</li>
+						<li>
+							<a href="news.html">最新动态</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<div style="height: 75px;"></div>
+<!--contact start here-->
+<div class="contant">
+	<div class="container">
+		<div class="contant-main">
+			<div class="col-md-12">
+				<div class="liuyanban">
+					<div class="col-md-12 policy-main">
+						<h3 class="text-center">留言板</h3>
+					</div>
+					<!-- 姓名 -->
+					<div class="liuyanban-first">
+						<div><span>姓名：</span></div>
+						<div><input type="text" class="value"></div>
+					</div>
+					<!-- 邮箱 -->
+					<div class="liuyanban-youxiang">
+						<div><span style="display: block">邮箱：</span></div>
+						<div><textarea name="text" rows="1" cols="40" class="value"></textarea> </div>
+					</div>
+					<!--留言 -->
+					<div class="liuyanban-second">
+						<div><span style="display: block">留言：</span></div>
+						<div><textarea name="text" rows="8" cols="40" class="value"></textarea> </div>
+					</div>
+					<!--提交按钮与重置按钮-->
+					<div class="liuyanban-third">
+						<input type="button" class="btn" value="提交" onclick="submitContent()">
+						<input type="button" class="btn" value="重置" onclick="submitclean()">
+					</div>
+					<!--留言板显示内容-->
+					<div class="liuyanban-four">
+						<dl class="list policy-main">
+							<h3 class="text-center">往期留言</h3>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="col-md-12 policy-main">
+					<h3 class="text-center">联系我们</h3></div>
+				<div class="col-md-2"></div>
+				<div class="col-md-10">
+					<div class="col-md-2"></div>
+					<div class="col-md-8">
+					<a href="#"><img src="images/qq.png" class="img-lianxiwomen"></a>
+					<a href="#"><img src="images/weibo.png" class="img-lianxiwomen"></a>
+					<a href="#"><img src="images/wechat.png" class="img-lianxiwomen"></a>
+					</div>
+					<div class="col-md-2"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--contact end here-->
+<!--footer start here-->
+<div class="footer" id="footer">
+	<div class="container">
+		<div class="footer-main">
+			<div class="col-md-4 footer-top">
+				<h3>关于我们 </h3>
+				<p>正式成立于2017年2月8日，组织致力于宣传原发性免疫缺陷病，让社会对原发性免疫缺陷有更广泛的认知，减少基层医院的误诊漏诊，让更多患儿及时确诊，为更多患儿争取社会福利。组织今后将加强与医疗机构的联系，争取更好地为患者提供服务。</p><br>
+				<p>正式成立于2017年2月8日，组织致力于宣传原发性免疫缺陷病，让社会对原发性免疫缺陷有更广泛的认知，减少基层医院的误诊漏诊，让更多患儿及时确诊，为更多患儿争取社会福利。组织今后将加强与医疗机构的联系，争取更好地为患者提供服务。</p>
+			</div>
+			<div class="col-md-2 footer-top" id="footer-nav">
+				<h3>导航 </h3>
+				<ul>
+					<li><a href="home.html"> 首页</a></li>
+					<li><a href="about_us.html"> 关于我们</a></li>
+					<li><a href="discover_PID.html"> 发现PID</a></li>
+					<li><a href="PID_library.html"> PID图书馆</a></li>
+					<li><a href="drug_research.html"> 药物研究</a></li>
+					<li><a href="support_us.html"> 支持我们</a></li>
+					<li><a href="policy_guide.html"> 政策向导</a></li>
+					<li><a href="message_board.html"> 留言板</a></li>
+					<li><a href="friend_s_story.html"> 病友故事会</a></li>
+					<li><a href="news.html"> 最新动态</a></li>
+				</ul>
+				<div class="clear fix"> </div>
+			</div>
+			<div class="col-md-4 footer-top">
+				<h3>最新动态</h3>
+				<div class="news-footer">
+					<h4>同心协力 携手找医保</h4>
+					<p>2017年2月23日国家人社部发布了新的医保目录名单，其中包含了原发性免疫球蛋白缺乏症这一重要的病种，使我们PID患者有了医保能报销的可能性。</p>
+					<div class="col">
+						<p>2017-12-30</p>
+					</div>
+				</div>
+				<div class="news-footer">
+					<h4>2017重儿病友会总结-有你们在，爱才完整</h4>
+					<p>9月15日上午由重庆医科大学附属儿童医院风湿免疫科举办一年一度的原发性免疫缺陷病病友会在重庆6号楼会议厅顺利举办！</p>
+					<div class="col">
+						<p>2017-9-17</p>
+					</div>
+				</div>
+				<div class="clear fix"> </div>
+			</div>
+			<div class="col-md-2 footer-top" id="footer-contact">
+				<h3>联系我们</h3>
+				
+				<p>QQ群：
+					<a>295090825</a>&nbsp;&nbsp;&nbsp;
+					<img src="images/qqgroup-qrcode.png">
+				</p>
+				<p>微信公众号:
+					<a href="mailto:example@gmail.com">China_PID</a>
+					<img src="images/public-number-qrcode.png">
+				</p>
+			</div>
+			<div class="clear fix"> </div>
+		</div>
+	</div>
+</div>
+<!--/footer end here-->
+<!--copyright strat here-->
+<div class="copyright">
+	<div class="container">
+		<div class="copy-right-main">
+			<div class="col-md-6 copy-left">
+				<p>Copyright &copy; 2017-2018 ylc.All Rights Reserved.</p>
+			</div>
+				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"></span></a>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!--copyright end here-->
+</body>
+</html>
